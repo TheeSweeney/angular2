@@ -5,4 +5,6 @@ function multiply (x: number, y: number) {
 
 multiply(2, 3)
 
-multiply(2, "test")
+let person: string;
+
+person = 'bill';
