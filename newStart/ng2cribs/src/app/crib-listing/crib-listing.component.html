@@ -28,14 +28,28 @@
         </button>
       </div>
       <div *ngIf="crib.showDetails">
-        
-        <hr>
-        <button 
-          class="btn btn-sm btn-danger"
-          *ngIf="crib.showDetails"
-          (click)="crib.showDetails = !crib.showDetails">
-          Less
-        </button>
+        <div class="details">
+          <h4>
+            <span class="label label-warning">
+              {{ crib.bedrooms }} Bedrooms
+            </span>
+            <span class="label label-primary">
+              {{ crib.bathrooms }} Bathrooms
+            </span>
+            <span class="label label-primary">
+              {{ crib.area }} sqft.
+            </span>
+          </h4>
+          <p>{{ crib.description }}</p>
+          
+          <hr>
+          <button 
+            class="btn btn-sm btn-danger"
+            *ngIf="crib.showDetails"
+            (click)="crib.showDetails = !crib.showDetails">
+            Less
+          </button>
+        </div>
       </div>
     </div>
   </div>
