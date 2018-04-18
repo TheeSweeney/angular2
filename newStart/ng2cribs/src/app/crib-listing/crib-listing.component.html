@@ -1,1 +1,3 @@
-<pre>{{ cribs | json}}</pre>><!--angular give us pipes that allow us to supply a pipe cahracter and then the type of pipe we want to use-->
+<div *ngFor="let crib of cribs"><!--for each item in cribs array we will have local access to it through 'crib'-->
+  <h3>{{ crib.address }}</h3>
+</div>
