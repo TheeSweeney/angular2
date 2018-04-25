@@ -17,7 +17,7 @@ export class CribListingComponent implements OnInit {//OnInit is a lifecycle hoo
     this.http.get('data/cribs.json')
       .map( res => res.json())
       .subscribe(
-        data => console.log(data)
+        data => this.cribs = data
       )
   }
 
