@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-crib-card',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crib-card.component.css']
 })
 export class CribCardComponent implements OnInit {
+
+  @Input('crib') crib: any;//we want to accept binding called crib and assign it to a local property called crib
+  //anything passed into crib property is locally referred to as crib and we can use it in our view
 
   constructor() { }
 

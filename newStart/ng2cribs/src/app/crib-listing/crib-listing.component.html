@@ -1,3 +1,4 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-<div *ngFor="let crib of cribs" class="col-4 mb-2"><!--for each item in cribs array we will have local access to it through 'crib'-->
+<div *ngFor="let crib of cribs" ><!--for each item in cribs array we will have local access to it through 'crib'-->
+  <app-crib-card [crib]="crib" class="col-4 mb-2"></app-crib-card>
 </div>
