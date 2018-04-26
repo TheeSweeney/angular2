@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
@@ -20,7 +21,8 @@ import { AddListingFormComponent } from './add-listing-form/add-listing-form.com
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
     //this list modules that will be imported into the app
   ],
   providers: [CribsService],//any injectable services will be added here

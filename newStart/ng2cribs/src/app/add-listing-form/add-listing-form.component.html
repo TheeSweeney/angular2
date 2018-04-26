@@ -42,14 +42,50 @@
       <div class="form-group col-sm-6">
         <label for="description">Description</label>
         <textarea
-        type="text"
-        class="form-control"
-        placeholder="Description" 
-        name="description"
-        ngModel
-        required
-        >
-      </textarea>
+          type="text"
+          class="form-control"
+          placeholder="Description" 
+          name="description"
+          ngModel
+          required>
+        </textarea>
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="beds">Beds</label>
+        <input 
+          type="text"
+          class="form-control"
+          placeholder="Beds"
+          name="bedrooms"
+          ngModel
+          required>
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="baths">Baths</label>
+        <input 
+          type="text"
+          class="form-control"
+          placeholder="Baths"
+          name="bathrooms"
+          ngModel
+          required>
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="sqft">SqFt</label>
+        <input 
+          type="text"
+          class="form-control"
+          placeholder="SqFt"
+          name="area"
+          ngModel
+          required>
+      </div>
+      <div class="form-group col-sm-12">
+        <button 
+          class="btn btn-primary listing-button"
+          type="submit">
+            Add
+        </button>
       </div>
     </form>
   </div>
