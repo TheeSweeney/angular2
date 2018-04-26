@@ -25,7 +25,7 @@ export class CribListingComponent implements OnInit {//OnInit is a lifecycle hoo
       );
     
     this.cribsService.newCribSubject.subscribe(
-      data => this.cribs.push(data)
+      data => this.cribs = [data, ...this.cribs]//spread operator, this take info from old array and adds to new array, allowing us to put new inputs at the beginning;
     )
   }
 }
