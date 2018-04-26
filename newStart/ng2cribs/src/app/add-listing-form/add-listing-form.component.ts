@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CribsService } from './../services/cribs.service';
 
 @Component({
   selector: 'app-add-listing-form',
@@ -8,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class AddListingFormComponent implements OnInit {
 
   propertyTypes: Array<string> = ['House', 'Condo', 'Duplex']
-  
-  constructor() { }
+
+  constructor(public cribsService: CribsService) { }
 
   ngOnInit() {
   }
 
   onCribSubmit(data) {
-    console.log(data)
+    this.cribsService.addCrib(data);
   }
 
 }

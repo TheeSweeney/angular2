@@ -23,5 +23,9 @@ export class CribListingComponent implements OnInit {//OnInit is a lifecycle hoo
         data => this.cribs = data,
         error => this.error = error.statusText
       );
+    
+    this.cribsService.newCribSubject.subscribe(
+      data => this.cribs.push(data)
+    )
   }
 }
