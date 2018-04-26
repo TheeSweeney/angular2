@@ -7,12 +7,14 @@ import { CribListingComponent } from './crib-listing/crib-listing.component';
 import { CribCardComponent } from './crib-card/crib-card.component';
 
 import { CribsService } from './services/cribs.service';
+import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CribListingComponent,
-    CribCardComponent
+    CribCardComponent,
+    AddListingFormComponent
     //any time a new componenet is added it will also be placed in this list
     //if we add it through the cli using the command `ng g component [component-name]` it will automatically add it here and create a component file with a boilerplate test suite, css, html, and ts file 
   ],
