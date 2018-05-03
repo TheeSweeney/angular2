@@ -1,4 +1,27 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-<div *ngFor="let crib of cribs" class="col-4 mb-2"><!--for each item in cribs array we will have local access to it through 'crib'-->
-  <app-crib-card [crib]="crib"></app-crib-card>
+<div class="row">
+  <div class="col-sm-12 mb-5">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="col-sm-4">
+          <label for="sort-field">Sort By</label>
+          <select 
+            class="form-control"
+            name="sort-field" 
+            id="sort-field" 
+            [(ngModel)]="sortField">
+            <option 
+              *ngFor="let field of sortFields"
+              [value]="field">
+                {{ utilService.capitalize(field) }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngFor="let crib of cribs" class="col-4 mb-2"><!--for each item in cribs array we will have local access to it through 'crib'-->
+    <app-crib-card [crib]="crib"></app-crib-card>
+  </div>
 </div>
