@@ -8,14 +8,17 @@ import { CribListingComponent } from './crib-listing/crib-listing.component';
 import { CribCardComponent } from './crib-card/crib-card.component';
 
 import { CribsService } from './services/cribs.service';
+import { UtilService } from './services/util.service'
 import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
+import { SortByPipe } from './pipes/sort-by.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CribListingComponent,
     CribCardComponent,
-    AddListingFormComponent
+    AddListingFormComponent,
+    SortByPipe
     //any time a new componenet is added it will also be placed in this list
     //if we add it through the cli using the command `ng g component [component-name]` it will automatically add it here and create a component file with a boilerplate test suite, css, html, and ts file 
   ],
@@ -25,7 +28,7 @@ import { AddListingFormComponent } from './add-listing-form/add-listing-form.com
     FormsModule
     //this list modules that will be imported into the app
   ],
-  providers: [CribsService],//any injectable services will be added here
+  providers: [CribsService, UtilService],//any injectable services will be added here
   bootstrap: [AppComponent]//which component is the top level component?
 })
 export class AppModule { }
