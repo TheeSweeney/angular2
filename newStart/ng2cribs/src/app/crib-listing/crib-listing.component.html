@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <div *ngFor="let crib of cribs | sortBy: [sortField]" class="col-4 mb-2"><!--for each item in cribs array we will have local access to it through 'crib'-->
+  <div *ngFor="let crib of cribs | sortBy: [sortField, sortDirection]" class="col-4 mb-2"><!--for each item in cribs array we will have local access to it through 'crib'-->
     <app-crib-card [crib]="crib"></app-crib-card>
   </div>
 </div>

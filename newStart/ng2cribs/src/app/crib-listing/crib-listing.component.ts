@@ -12,6 +12,8 @@ export class CribListingComponent implements OnInit {//OnInit is a lifecycle hoo
 
   cribs: Array<any>; 
   error: string;
+  sortDirection: string = 'asc';
+  sortField: string = 'price';
   sortFields: Array<string> = [
     'address',
     'area',
